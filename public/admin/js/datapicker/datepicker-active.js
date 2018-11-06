@@ -38,7 +38,8 @@
 	$('#data_5 .input-daterange').datepicker({
 		keyboardNavigation: false,
 		forceParse: false,
-		autoclose: true
+		autoclose: true,
+        format: "yyyy-mm-dd"
 	});
 
 

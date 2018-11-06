@@ -2,22 +2,22 @@
 
 @section('content')
     <div id="content">
-        <div class="breadcome-list shadow-reset">
+        <div class="breadcome-list shadow-reset" onclick="showmodal(0)">
             <div class="row">
-                <div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;">
+                <div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;" class="namaprod0">
                     Soto
                 </div>
-                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
+                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;" class="hrgprod0">
                     12000
                 </div>
             </div>
         </div>
-        <div class="breadcome-list shadow-reset">
+        <div class="breadcome-list shadow-reset" onclick="showmodal(1)">
             <div class="row">
-                <div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;">
+                <div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;" class="namaprod1">
                     Pecel
                 </div>
-                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
+                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;" class="hrgprod1">
                     10000
                 </div>
             </div>
@@ -70,6 +70,10 @@
             $('#content').append('<div class="breadcome-list shadow-reset"><div class="row"><div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;">'+nama+'</div><div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">'+harga+'</div></div></div>');
 
             $('#input-modal').modal('hide');
+        }
+
+        function showmodal(e){
+            $('#input-modal').modal('show');
         }
     </script>
 @endsection

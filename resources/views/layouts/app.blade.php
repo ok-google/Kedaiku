@@ -26,6 +26,9 @@
     <!-- mCustomScrollbar CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('admin/css/jquery.mCustomScrollbar.min.css') }}">
+    <!-- datapicker CSS
+       ============================================ -->
+    <link rel="stylesheet" href="{{ asset('admin/css/datapicker/datepicker3.css') }}">
     <!-- animate CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('admin/css/animate.css') }}">
@@ -836,6 +839,10 @@
 <!-- scrollUp JS
     ============================================ -->
 <script src="{{ asset('admin/js/jquery.scrollUp.min.js') }}"></script>
+<!-- datapicker JS
+		============================================ -->
+<script src="{{ asset('admin/js/datapicker/bootstrap-datepicker.js') }}"></script>
+<script src="{{ asset('admin/js/datapicker/datepicker-active.js') }}"></script>
 <!-- Charts JS
     ============================================ -->
 <script src="{{ asset('admin/js/charts/Chart.js') }}"></script>
