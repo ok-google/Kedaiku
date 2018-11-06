@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    Tes
+    <div class="breadcome-list shadow-reset">
+        <div class="row">
+            tes
+        </div>
+    </div>
 @endsection

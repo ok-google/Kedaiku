@@ -68,7 +68,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://youtube.com" target="_blank" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                        <a href="{{ url('/bahan/')}}" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                             <i class="fa big-icon fa-home"></i>
                             <span class="mini-dn"> Bahan</span>
                         </a>
@@ -80,7 +80,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                        <a href="{{ url('/Kas/')}}" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                             <img src="{{ asset('admin/img/purse.png') }}" class="big-icon" width="15px" height="15px"></img>
                             <span class="mini-dn"> Kas</span>
                         </a>
@@ -621,11 +621,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="breadcome-list shadow-reset">
-                            <div class="row">
-                                @yield('content')
-                            </div>
-                        </div>
+                        @yield('content')
                     </div>
                 </div>
             </div>
