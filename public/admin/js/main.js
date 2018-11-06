@@ -92,7 +92,7 @@
 		// Collapse Chat function
 			$('.chat-icon-link').on('click', function () {
 				var button = $(this).find('i');
-				button.toggleClass('fa-comments').toggleClass('fa-remove');
+				button.toggleClass('fa-plus').toggleClass('fa-plus');
 			});
 		// Collapse ibox function
 			$('.collapse-link').on('click', function () {

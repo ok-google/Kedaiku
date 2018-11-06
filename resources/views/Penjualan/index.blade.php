@@ -3,7 +3,12 @@
 @section('content')
     <div class="breadcome-list shadow-reset">
         <div class="row">
-            tes
+            Lombok
+        </div>
+    </div>
+    <div class="breadcome-list shadow-reset">
+        <div class="row">
+            Bawang
         </div>
     </div>
 @endsection

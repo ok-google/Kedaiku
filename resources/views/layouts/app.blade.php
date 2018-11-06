@@ -29,6 +29,9 @@
     <!-- animate CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('admin/css/animate.css') }}">
+    <!-- modals CSS
+       ============================================ -->
+    <link rel="stylesheet" href="{{ asset('admin/css/modals.css') }}">
     <!-- normalize CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('admin/css/normalize.css') }}">
@@ -74,7 +77,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                        <a href="{{ url('/produk') }}" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                             <i class="fa big-icon fa-th-large"></i>
                             <span class="mini-dn"> Produk</span>
                         </a>
@@ -836,6 +839,9 @@
 <!-- Charts JS
     ============================================ -->
 <script src="{{ asset('admin/js/charts/Chart.js') }}"></script>
+<!-- modal JS
+		============================================ -->
+<script src="{{ asset('admin/js/modal-active.js') }}"></script>
 <script src="{{ asset('admin/js/charts/bar-chart.js') }}"></script>
 <!-- main JS
     ============================================ -->
