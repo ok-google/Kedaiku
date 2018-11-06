@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/penjualan/', 'Penjualan@index')->name('penjualan.index');
+Route::get('/produk', 'ProdukController@index')->name('produk.index');
