@@ -62,6 +62,30 @@
         </div>
     </div>
 
+    <div id="search-modal" class="modal modal-adminpro-general default-popup-PrimaryModal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-close-area modal-close-df">
+                    <a class="close" data-dismiss="modal" >
+                        <i class="fa fa-close" style="margin-top: 25%;"></i>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group-inner" align="left">
+                            <label>Cari</label>
+                            <input type="text" id="search" class="form-control" placeholder="Nama Produk">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a data-dismiss="modal" href="#">Batal</a>
+                    <a href="#" id="btnSave" onclick="searchProduk()">Cari</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         function addProduk(){
             var nama = $('#nama').val();
