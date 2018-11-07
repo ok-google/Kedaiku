@@ -10,5 +10,10 @@ class Penjualan extends Controller
 	{
 		return view('Penjualan.index');	
 	}
+
+    public function dashboard()
+    {
+        return view('Penjualan.dashboard');
+    }
     
 }

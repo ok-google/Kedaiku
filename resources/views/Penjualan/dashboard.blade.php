@@ -3,45 +3,29 @@
 @section('content')
     <div class="breadcome-list shadow-reset">
         <div class="row">
-            <div class="form-group data-custon-pick data-custom-mg" id="data_5">
-                <div class="input-daterange input-group  col-md-12" id="datepicker">
-                    <input type="text" class="form-control  col-md-6" name="start" value="2018-11-01">
-                    <span class="input-group-addon"></span>
-                    <input type="text" class="form-control  col-md-6" name="end" value="2018-11-06">
-                </div>
+            <div align="center">
+                Penjualan Hari ini
             </div>
         </div>
     </div>
     <div id="content">
         <div class="breadcome-list shadow-reset">
             <div class="row">
-                <div style="margin-left: 90%; font-size: 16px; font-weight: black; font-style: bold;">
-                    2018-11-06
-                </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
                     Soto
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
                     10 x 120000 = 120000
                 </div>
-                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    kas
-                </div>
             </div>
         </div>
         <div class="breadcome-list shadow-reset">
             <div class="row">
-                <div style="margin-left: 90%; font-size: 16px; font-weight: black; font-style: bold;">
-                    2018-11-06
-                </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
                     Pecel
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
                     10 x 10 = 100000
-                </div>
-                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    kas
                 </div>
             </div>
         </div>

@@ -15,7 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/penjualan/', 'Penjualan@index')->name('penjualan.index');
-Route::get('/bahan/', 'BahanController@index')->name('bahan.index');
-Route::get('/Kas/', 'KasController@index')->name('Kas.index');
-Route::get('/produk', 'ProdukController@index')->name('produk.index');
+Route::get('/', 'Penjualan@dashboard')->name('penjualan.dashboard');
+
+Route::get('/master/bahan/', 'BahanController@index')->name('bahan.index');
+Route::get('/master/Kas/', 'KasController@index')->name('Kas.index');
+Route::get('/master/produk', 'ProdukController@index')->name('produk.index');
+
+Route::get('/transaksi/penjualan/', 'Penjualan@index')->name('penjualan.index');
+
+Route::get('/laporan/grafik', 'GrafikController@index')->name('grafik.index');
