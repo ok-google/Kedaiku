@@ -80,7 +80,7 @@
                 </div>
                 <div class="modal-footer">
                     <a data-dismiss="modal" href="#">Batal</a>
-                    <a href="#" id="btnSave" onclick="searchProduk()">Cari</a>
+                    <a href="#" id="btnSave" onclick="searchProduk()">&nbsp;Cari&nbsp;&nbsp; </a>
                 </div>
             </div>
         </div>
