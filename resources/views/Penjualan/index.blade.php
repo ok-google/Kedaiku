@@ -24,9 +24,6 @@
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
                     10 x 120000 = 120000
                 </div>
-                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    kas
-                </div>
             </div>
         </div>
         <div class="breadcome-list shadow-reset">
@@ -39,9 +36,6 @@
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
                     10 x 10 = 100000
-                </div>
-                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    kas
                 </div>
             </div>
         </div>
@@ -68,7 +62,7 @@
                 <div class="modal-body">
                     <form action="#">
                         <div class="form-group-inner data-custon-pick" id="data_1" align="left">
-                            <label>Simple data input format</label>
+                            <label>Tanggal</label>
                             <div class="input-group date">
                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 <input type="text" class="form-control" value="10/04/2018" >

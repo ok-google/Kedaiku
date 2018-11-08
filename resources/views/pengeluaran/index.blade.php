@@ -19,13 +19,13 @@
                     2018-11-06
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    Lombok
+                    Transaksi
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    10 x 120000 = 120000
+                    Kas
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    kas
+                    Jumlah
                 </div>
             </div>
         </div>
@@ -35,13 +35,13 @@
                     2018-11-06
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    Bawang
+                    Beli Lombok
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    10 x 10 = 100000
+                    Kas
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    kas
+                    500000
                 </div>
             </div>
         </div>
@@ -75,23 +75,8 @@
                             </div>
                         </div>
                         <div class="form-group-inner" align="left">
-                            <label>Bahan</label>
-                            <div class="form-select-list">
-                                <select class="form-control custom-select-value" name="Bahan">
-                                    <option>Bahan 1</option>
-                                    <option>Bahan 2</option>
-                                    <option>Bahan 3</option>
-                                    <option>Bahan 4</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group-inner" align="left">
-                            <label>Harga</label>
-                            <input type="number" id="harga" class="form-control" placeholder="Harga Bahan">
-                        </div>
-                        <div class="form-group-inner" align="left">
-                            <label>Qty</label>
-                            <input type="number" id="qty" class="form-control" placeholder="Qty Bahan">
+                            <label>Transaksi</label>
+                            <input type="number" id="harga" class="form-control" placeholder="Transaksi">
                         </div>
                         <div class="form-group-inner" align="left">
                             <label>Kas</label>
@@ -104,18 +89,22 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group-inner" align="left">
+                            <label>Jumlah</label>
+                            <input type="number" id="harga" class="form-control" placeholder="Jumlah">
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <a data-dismiss="modal" href="#">Batal</a>
-                    <a href="#" id="btnSave" onclick="addBahan()">Simpan</a>
+                    <a href="#" id="btnSave" onclick="addPengeluaran()">Simpan</a>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        function addBahan(){
+        function addPengeluaran(){
             var nama = $('#nama').val();
             var harga = $('#harga').val();
 
