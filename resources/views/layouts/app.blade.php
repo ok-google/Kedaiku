@@ -97,7 +97,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('/transaksi/pembelian') }}" target="_blank" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                        <a href="{{ url('/transaksi/pembelian') }}" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                             <i class="fa big-icon fa-truck"></i>
                             <span class="mini-dn"> Pembelian</span>
                         </a>
@@ -109,20 +109,20 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                        <a href="{{ url('/transaksi/pemasukan') }}" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                             <img src="{{ asset('admin/img/income.png') }}" class="big-icon" width="15px" height="15px"></img>
                             <span class="mini-dn"> Pemasukan</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                        <a href="{{ url('/transaksi/pengeluaran') }}" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                             <img src="{{ asset('admin/img/hand-money.png') }}" class="big-icon"
                                  style="transform: scaleX(-1); width: 15px; height: 15px;"></img>
                             <span class="mini-dn"> Pengeluaran</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                        <a href="{{ url('/transaksi/mutasi kas') }}" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                             <img src="{{ asset('admin/img/mutation.jpg') }}" class="big-icon" width="15px" height="15px"></img>
                             <span class="mini-dn"> Mutasi Kas</span>
                         </a>
@@ -136,11 +136,11 @@
                             </span>
                         </a>
                         <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                            <a href="inbox.html" class="dropdown-item">
+                            <a href="{{ url('/laporan/laba rugi') }}" class="dropdown-item">
                                 <img src="{{ asset('admin/img/report.png') }}" class="big-icon" width="15px" height="15px"></img>
                                 Laba Rugi
                             </a>
-                            <a href="{{ url('/grafik') }}" class="dropdown-item">
+                            <a href="{{ url('/laporan/grafik') }}" class="dropdown-item">
                                 <img src="{{ asset('admin/img/chart.jpg') }}" class="big-icon" width="15px" height="15px"></img>
                                 Grafik
                             </a>\

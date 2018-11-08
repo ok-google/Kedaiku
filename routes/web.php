@@ -21,6 +21,11 @@ Route::get('/master/bahan/', 'BahanController@index')->name('bahan.index');
 Route::get('/master/Kas/', 'KasController@index')->name('Kas.index');
 Route::get('/master/produk', 'ProdukController@index')->name('produk.index');
 
+Route::get('/transaksi/pembelian/', 'PembelianController@index')->name('pembelian.index');
 Route::get('/transaksi/penjualan/', 'Penjualan@index')->name('penjualan.index');
+Route::get('/transaksi/mutasi kas/', 'MutasiKasController@index')->name('mutasi.index');
+Route::get('/transaksi/pemasukan/', 'pemasukan@index')->name('pemasukan.index');
+Route::get('/transaksi/pengeluaran/', 'pengeluaran@index')->name('pengeluaran.index');
 
+Route::get('/laporan/laba rugi', 'LabaRugiController@index')->name('labarugi.index');
 Route::get('/laporan/grafik', 'GrafikController@index')->name('grafik.index');

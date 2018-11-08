@@ -19,13 +19,13 @@
                     2018-11-06
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    Lombok
+                    Kas Debet : BCA
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    10 x 120000 = 120000
+                    Kas Kredit : Dompet
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    kas
+                    10000000
                 </div>
             </div>
         </div>
@@ -35,13 +35,13 @@
                     2018-11-06
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    Bawang
+                    Kas Debet : Dompet
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    10 x 10 = 100000
+                    Kas Kredit : BRI
                 </div>
                 <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">
-                    kas
+                    10000000
                 </div>
             </div>
         </div>
@@ -75,47 +75,43 @@
                             </div>
                         </div>
                         <div class="form-group-inner" align="left">
-                            <label>Bahan</label>
+                            <label>Kas Debet</label>
                             <div class="form-select-list">
-                                <select class="form-control custom-select-value" name="Bahan">
-                                    <option>Bahan 1</option>
-                                    <option>Bahan 2</option>
-                                    <option>Bahan 3</option>
-                                    <option>Bahan 4</option>
+                                <select class="form-control custom-select-value" name="debet">
+                                    <option>Dompet</option>
+                                    <option>BCA</option>
+                                    <option>BRI</option>
+                                    <option>Anak</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group-inner" align="left">
-                            <label>Harga</label>
-                            <input type="number" id="harga" class="form-control" placeholder="Harga Bahan">
-                        </div>
-                        <div class="form-group-inner" align="left">
-                            <label>Qty</label>
-                            <input type="number" id="qty" class="form-control" placeholder="Qty Bahan">
-                        </div>
-                        <div class="form-group-inner" align="left">
-                            <label>Kas</label>
+                            <label>Kas Kredit</label>
                             <div class="form-select-list">
-                                <select class="form-control custom-select-value" name="Kas">
-                                    <option>Kas 1</option>
-                                    <option>Kas 2</option>
-                                    <option>Kas 3</option>
-                                    <option>Kas 4</option>
+                                <select class="form-control custom-select-value" name="kredit">
+                                    <option>Dompet</option>
+                                    <option>BCA</option>
+                                    <option>BRI</option>
+                                    <option>Anak</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="form-group-inner" align="left">
+                            <label>Jumlah</label>
+                            <input type="number" id="harga" class="form-control" placeholder="Jumlah">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <a data-dismiss="modal" href="#">Batal</a>
-                    <a href="#" id="btnSave" onclick="addBahan()">Simpan</a>
+                    <a href="#" id="btnSave" onclick="addProduk()">Simpan</a>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        function addBahan(){
+        function addProduk(){
             var nama = $('#nama').val();
             var harga = $('#harga').val();
 
