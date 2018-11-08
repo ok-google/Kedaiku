@@ -122,7 +122,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                        <a href="{{ url('/transaksi/mutasi kas') }}" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                             <img src="{{ asset('admin/img/mutation.jpg') }}" class="big-icon" width="15px" height="15px"></img>
                             <span class="mini-dn"> Mutasi Kas</span>
                         </a>
@@ -136,11 +136,11 @@
                             </span>
                         </a>
                         <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                            <a href="inbox.html" class="dropdown-item">
+                            <a href="{{ url('/laporan/laba rugi') }}" class="dropdown-item">
                                 <img src="{{ asset('admin/img/report.png') }}" class="big-icon" width="15px" height="15px"></img>
                                 Laba Rugi
                             </a>
-                            <a href="{{ url('/grafik') }}" class="dropdown-item">
+                            <a href="{{ url('/laporan/grafik') }}" class="dropdown-item">
                                 <img src="{{ asset('admin/img/chart.jpg') }}" class="big-icon" width="15px" height="15px"></img>
                                 Grafik
                             </a>\
