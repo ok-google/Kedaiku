@@ -13,7 +13,13 @@
              <div style="margin-left: 3%; font-size: 10px;"> 50000 </div>
         </div>
     </div>
-
+      <div class="breadcome-list shadow-reset">
+        <div class="row">
+        	<div style="margin-left: 95%; font-size: 16px; font-weight: black; font-style: bold;"> Kasir </div>
+            <div style="margin-left: 3%; font-size: 18px;"> Modal2 </div>
+             <div style="margin-left: 3%; font-size: 10px;"> 50000 </div>
+        </div>
+    </div>
      <div class="chat-list-wrap">
         <div class="chat-list-adminpro">
             <div class="chat-button">
@@ -23,7 +29,6 @@
             </div>
         </div>
     </div>
-
     <div id="input-modal" class="modal modal-adminpro-general default-popup-PrimaryModal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -43,6 +48,8 @@
                             <input type="number" id="harga" class="form-control" placeholder="Saldo">
                         </div>
                     </form>
+                    	<input type="checkbox" style="margin-left: 3%;"/>
+						<label>Default Kasir</label>
                 </div>
                 <div class="modal-footer">
                     <a data-dismiss="modal" href="#">Batal</a>
