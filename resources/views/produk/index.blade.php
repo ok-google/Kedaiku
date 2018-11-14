@@ -47,10 +47,12 @@
                         <div class="form-group-inner" align="left">
                             <label>Nama Produk</label>
                             <input type="text" id="nama" class="form-control" placeholder="Nama Produk">
+                            <em for="nama" class="invalid" id="namaValidate" style="display: none; color: red;">Masukan Nama Product</em>
                         </div>
                         <div class="form-group-inner" align="left">
                             <label>Harga</label>
                             <input type="number" id="harga" class="form-control" placeholder="Harga Produk">
+                            <em for="harga" class="invalid" id="hargaValidate" style="display: none;color: red;">Masukan Harga Product</em>
                         </div>
                     </form>
                 </div>
@@ -62,38 +64,31 @@
         </div>
     </div>
 
-    <div id="search-modal" class="modal modal-adminpro-general default-popup-PrimaryModal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-close-area modal-close-df">
-                    <a class="close" data-dismiss="modal" >
-                        <i class="fa fa-close" style="margin-top: 25%;"></i>
-                    </a>
-                </div>
-                <div class="modal-body">
-                    <form action="#">
-                        <div class="form-group-inner" align="left">
-                            <label>Cari</label>
-                            <input type="text" id="search" class="form-control" placeholder="Nama Produk">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a data-dismiss="modal" href="#">Batal</a>
-                    <a href="#" id="btnSave" onclick="searchProduk()">&nbsp;Cari&nbsp;&nbsp; </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
         function addProduk(){
             var nama = $('#nama').val();
             var harga = $('#harga').val();
+            var action = true;
 
-            $('#content').append('<div class="breadcome-list shadow-reset"><div class="row"><div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;">'+nama+'</div><div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">'+harga+'</div></div></div>');
+            if(nama == ''){
+                $('#namaValidate').css('display', 'inline');
+                action = false;
+            } else{
+                $('#namaValidate').css('display', 'none');
+            }
+            if(harga == ''){
+                $('#hargaValidate').css('display', 'inline');
+                action = false;
+            } else{
+                $('#hargaValidate').css('display', 'none');
+            }
 
-            $('#input-modal').modal('hide');
+            if(action){
+                $('#content').append('<div class="breadcome-list shadow-reset"><div class="row"><div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;">'+nama+'</div><div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">'+harga+'</div></div></div>');
+
+                $('#input-modal').modal('hide');
+            }
+
         }
 
         function showmodal(e){

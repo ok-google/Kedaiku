@@ -45,13 +45,5 @@
             </div>
         </div>
     </div>
-    <div id="search-modal" class="modal modal-adminpro-general default-popup-PrimaryModal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-close-area modal-close-df">
-                    <a class="close" data-dismiss="modal" >
-                        <i class="fa fa-close" style="margin-top: 25%;"></i>
-                    </a>
-                </div>
 
 @endsection
