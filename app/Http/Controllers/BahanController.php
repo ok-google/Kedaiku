@@ -29,5 +29,23 @@ class BahanController extends Controller
 
 		return response()->json(['success'=> $request->Nama.' berhasil ditambahkan']);
 	}
+
+	public function update(Request $request)
+	{
+		$BahanModel = Bahan::where('id', $request->id)
+							->update([
+								'nama' => $request->Nama
+							]);
+
+		return response()->json(['success'=> $request->Nama.' berhasil diupdate']);	
+	}
+
+	public function delete(Request $request)
+	{
+		$BahanModel = Bahan::where('id', $request->id)
+							->delete();
+
+		return response()->json(['success'=> $request->Nama.' berhasil dihapus']);		
+	}
     
 }

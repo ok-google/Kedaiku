@@ -20,6 +20,8 @@ Route::get('/', 'Penjualan@dashboard')->name('penjualan.dashboard');
 Route::get('/master/bahan/', 'BahanController@index')->name('bahan.index');
 Route::post('/master/bahan/store', 'BahanController@store')->name('bahan.store');
 Route::get('/master/bahan/getAll', 'BahanController@getAll')->name('bahan.all');
+Route::post('/master/bahan/update', 'BahanController@update')->name('bahan.update');
+Route::post('/master/bahan/delete', 'BahanController@delete')->name('bahan.delete');
 
 
 Route::get('/master/Kas/', 'KasController@index')->name('Kas.index');
