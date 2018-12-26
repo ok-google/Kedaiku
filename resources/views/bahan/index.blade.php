@@ -1,16 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="breadcome-list shadow-reset">
-        <div class="row">
-            <div style="margin-left: 3%; font-size: 18px;"> Bawang </div>
-        </div>
+    
+    <div id = "listBahan">
+
     </div>
-    <div class="breadcome-list shadow-reset">
-        <div class="row">
-            <div style="margin-left: 3%; font-size: 18px;"> Lombok </div>
-        </div>
-    </div>
+
     <div class="chat-list-wrap">
         <div class="chat-list-adminpro">
             <div class="chat-button">
@@ -32,6 +27,7 @@
 
                 <div class="modal-body">
                     <form action="#">
+                        @csrf
                         <div class="form-group-inner" align="left">
                             <label>Nama Bahan</label>
                             <input type="text" id="nama" class="form-control" placeholder="Nama Bahan">
@@ -40,10 +36,67 @@
                 </div>
                 <div class="modal-footer">
                     <a data-dismiss="modal" href="#">Batal</a>
-                    <a href="#" id="btnSave" onclick="addBahan()">Simpan</a>
+                    <a href="#" id="btnSave">Simpan</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        function insert(e){
+            e.preventDefault();
+                
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                url: "{{ url('/master/bahan/store') }}",
+                method: 'post',
+                data: {
+                    _token: $("input[name=_token]").val(),
+                    Nama: $('#nama').val(),
+                },
+                success: function(result){
+                    $('#nama').val('');
+                    $('#input-modal').modal('hide');
+                }
+            });
+        }
+
+        function getData(){
+            $.ajax({
+                url: "{{ url('/master/bahan/getAll') }}",
+                method: 'get',
+                data: {
+                    
+                },
+                success: function(result){
+                    $('#listBahan').empty();
+
+                    $.each(result, function(index) {
+                        var html = '<div class="breadcome-list shadow-reset">' +
+                                    '<div class="row">' +
+                                        '<div style="margin-left: 3%; font-size: 18px;"> '+ result[index].nama +' </div> ' +
+                                    '</div>' +
+                                '</div>';
+
+                        $('#listBahan').append(html);
+                    });
+                }
+            });   
+        }
+
+        $( document ).ready(function(){
+            getData();
+
+            $('#btnSave').click(function(e){
+                insert(e);
+                getData();
+            });
+        });
+    </script>
 
 @endsection

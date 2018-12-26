@@ -50,6 +50,43 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="{{ asset('admin/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
+    <!-- jquery
+    ============================================ -->
+    <script src="{{ asset('admin/js/vendor/jquery-1.11.3.min.js') }}"></script>
+    <!-- bootstrap JS
+        ============================================ -->
+    <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
+    <!-- meanmenu JS
+        ============================================ -->
+    <script src="{{ asset('admin/js/jquery.meanmenu.js') }}"></script>
+    <!-- sticky JS
+        ============================================ -->
+    <script src="{{ asset('admin/js/jquery.sticky.js') }}"></script>
+    <!-- mCustomScrollbar JS
+        ============================================ -->
+    <script src="{{ asset('admin/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <!-- scrollUp JS
+        ============================================ -->
+    <script src="{{ asset('admin/js/jquery.scrollUp.min.js') }}"></script>
+    <!-- datapicker JS
+            ============================================ -->
+    <script src="{{ asset('admin/js/datapicker/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('admin/js/datapicker/datepicker-active.js') }}"></script>
+
+    <!-- modal JS
+            ============================================ -->
+    <script src="{{ asset('admin/js/modal-active.js') }}"></script>
+    <!-- Charts JS
+        ============================================ -->
+    <script src="{{ asset('admin/js/charts/Chart.js') }}"></script>
+    <script src="{{ asset('admin/js/charts/line-chart.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.form.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('admin/js/form-active.js') }}"></script>
+    <!-- main JS
+        ============================================ -->
+    <script src="{{ asset('admin/js/main.js') }}"></script>
 </head>
 
 <body class="materialdesign">
@@ -463,43 +500,6 @@
         <!-- Charts End-->
     </div>
 </div>
-<!-- jquery
-    ============================================ -->
-<script src="{{ asset('admin/js/vendor/jquery-1.11.3.min.js') }}"></script>
-<!-- bootstrap JS
-    ============================================ -->
-<script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
-<!-- meanmenu JS
-    ============================================ -->
-<script src="{{ asset('admin/js/jquery.meanmenu.js') }}"></script>
-<!-- sticky JS
-    ============================================ -->
-<script src="{{ asset('admin/js/jquery.sticky.js') }}"></script>
-<!-- mCustomScrollbar JS
-    ============================================ -->
-<script src="{{ asset('admin/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-<!-- scrollUp JS
-    ============================================ -->
-<script src="{{ asset('admin/js/jquery.scrollUp.min.js') }}"></script>
-<!-- datapicker JS
-		============================================ -->
-<script src="{{ asset('admin/js/datapicker/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('admin/js/datapicker/datepicker-active.js') }}"></script>
-
-<!-- modal JS
-		============================================ -->
-<script src="{{ asset('admin/js/modal-active.js') }}"></script>
-<!-- Charts JS
-    ============================================ -->
-<script src="{{ asset('admin/js/charts/Chart.js') }}"></script>
-<script src="{{ asset('admin/js/charts/line-chart.js') }}"></script>
-<script src="{{ asset('admin/js/jquery.form.min.js') }}"></script>
-<script src="{{ asset('admin/js/jquery.validate.min.js') }}"></script>
-<script src="{{ asset('admin/js/form-active.js') }}"></script>
-<!-- main JS
-    ============================================ -->
-<script src="{{ asset('admin/js/main.js') }}"></script>
-
 
 </body>
 

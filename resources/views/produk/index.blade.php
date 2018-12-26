@@ -65,30 +65,30 @@
     </div>
 
     <script>
-        function addProduk(){
-            var nama = $('#nama').val();
-            var harga = $('#harga').val();
-            var action = true;
+        function insert(e){
+            e.preventDefault();
+                
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
 
-            if(nama == ''){
-                $('#namaValidate').css('display', 'inline');
-                action = false;
-            } else{
-                $('#namaValidate').css('display', 'none');
-            }
-            if(harga == ''){
-                $('#hargaValidate').css('display', 'inline');
-                action = false;
-            } else{
-                $('#hargaValidate').css('display', 'none');
-            }
+            $.ajax({
+                url: "{{ url('/master/bahan/store') }}",
+                method: 'post',
+                data: {
+                    _token: $("input[name=_token]").val(),
+                    Nama: $('#username').val(),
+                },
+                success: function(result){
+                    $('#return').text(result.success);
+                    
+                    $('#input-modal').modal('hide');
 
-            if(action){
-                $('#content').append('<div class="breadcome-list shadow-reset"><div class="row"><div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;">'+nama+'</div><div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">'+harga+'</div></div></div>');
-
-                $('#input-modal').modal('hide');
-            }
-
+                    $('#notification-modal').modal("show");
+                }
+            });
         }
 
         function showmodal(e){
