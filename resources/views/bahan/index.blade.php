@@ -173,10 +173,10 @@
                 getData();
             });
 
-            $( "#listBahan" ).delegate( ".bahan", "mousedown", function(e) {
-                    $('#id').val($(this).attr('data-id'));
-                    $('#notif-modal').modal('show'); 
-            });
+            // $( "#listBahan" ).delegate( ".bahan", "mousedown", function(e) {
+            //         $('#id').val($(this).attr('data-id'));
+            //         $('#notif-modal').modal('show'); 
+            // });
 
             $("#btnHapus").click(function(){
                 hapus();
