@@ -25,7 +25,12 @@ Route::post('/master/bahan/delete', 'BahanController@delete')->name('bahan.delet
 
 
 Route::get('/master/Kas/', 'KasController@index')->name('Kas.index');
-Route::get('/master/produk', 'ProdukController@index')->name('produk.index');
+Route::get('/master/produk/', 'ProdukController@index')->name('produk.index');
+Route::post('/master/produk/store', 'ProdukController@store')->name('produk.store');
+Route::get('/master/produk/getAll', 'ProdukController@getAll')->name('produk.all');
+Route::post('/master/produk/update', 'ProdukController@update')->name('produk.update');
+Route::post('/master/produk/delete', 'ProdukController@delete')->name('produk.delete');
+
 
 Route::get('/transaksi/pembelian/', 'PembelianController@index')->name('pembelian.index');
 Route::get('/transaksi/penjualan/', 'Penjualan@index')->name('penjualan.index');
