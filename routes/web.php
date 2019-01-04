@@ -25,6 +25,12 @@ Route::post('/master/bahan/delete', 'BahanController@delete')->name('bahan.delet
 
 
 Route::get('/master/Kas/', 'KasController@index')->name('Kas.index');
+Route::post('/master/kas/store', 'KasController@store')->name('kas.store');
+Route::get('/master/kas/getAll', 'KasController@getAll')->name('kas.all');
+Route::post('/master/kas/update', 'KasController@update')->name('kas.update');
+Route::post('/master/kas/delete', 'KasController@delete')->name('kas.delete');
+
+
 Route::get('/master/produk/', 'ProdukController@index')->name('produk.index');
 Route::post('/master/produk/store', 'ProdukController@store')->name('produk.store');
 Route::get('/master/produk/getAll', 'ProdukController@getAll')->name('produk.all');
