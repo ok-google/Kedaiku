@@ -2,26 +2,7 @@
 
 @section('content')
     <div id="listProduk">
-        <div class="breadcome-list shadow-reset" onclick="showmodal(0)">
-            <div class="row">
-                <div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;" class="namaprod0">
-                    Soto
-                </div>
-                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;" class="hrgprod0">
-                    12000
-                </div>
-            </div>
-        </div>
-        <div class="breadcome-list shadow-reset" onclick="showmodal(1)">
-            <div class="row">
-                <div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;" class="namaprod1">
-                    Pecel
-                </div>
-                <div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;" class="hrgprod1">
-                    10000
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <div class="chat-list-wrap">
@@ -42,9 +23,13 @@
                         <i class="fa fa-close" style="margin-top: 25%;"></i>
                     </a>
                 </div>
+
                 <div class="modal-body">
                     <form action="#">
                         @csrf
+                        <input type="hidden" id="id">
+                        <input type="hidden" id="type">
+                        
                         <div class="form-group-inner" align="left">
                             <label>Nama Produk</label>
                             <input type="text" id="nama" class="form-control" placeholder="Nama Produk">
@@ -86,7 +71,7 @@
                 },
                 success: function(result){
                     $('#nama').val('');
-                    $('#harga').val(0);
+                    $('#harga').val('');
                     $('#input-modal').modal('hide');
                 }
             });
@@ -112,7 +97,7 @@
                 },
                 success: function(result){
                     $('#nama').val('');
-                    $('#harga').val(0);
+                    $('#harga').val('');
                     $('#input-modal').modal('hide');
                 }
             });
@@ -129,12 +114,12 @@
                     $('#listProduk').empty();
 
                     $.each(result, function(index) {
-                        var html =  '<div class="breadcome-list shadow-reset" onclick="showmodal(0)" data-id="'+ result[index]          .id +'">' +
+                        var html =  '<div class="breadcome-list shadow-reset produk" data-id="'+ result[index].id +'">' +
                                     '<div class="row nama">' +
-                                        '<div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;" class="namaprod0">' +
+                                        '<div style="margin-left: 2%; font-size: 18px; font-weight: black; font-style: bold;">' +
                                             result[index].nama +' </div> ' +
                                         '</div>' +
-                                        '<div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;" class="hrgprod0">' +
+                                        '<div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">' +
                                             result[index].harga +
                                         '</div>' +
                                     '</div>' +

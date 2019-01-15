@@ -23,7 +23,7 @@ class ProdukController extends Controller
 
 	public function store(Request $request)
 	{
-		$BahanModel = Produk::create([
+		$ProdukModel = Produk::create([
 						'nama' => $request->Nama,
 						'harga' => $request->Harga
 					]);
@@ -33,7 +33,7 @@ class ProdukController extends Controller
 
 	public function update(Request $request)
 	{
-		$BahanModel = Produk::where('id', $request->id)
+		$ProdukModel = Produk::where('id', $request->id)
 							->update([
 								'nama' => $request->Nama,
 								'harga' => $request->Harga
@@ -44,7 +44,7 @@ class ProdukController extends Controller
 
 	public function delete(Request $request)
 	{
-		$BahanModel = Produk::where('id', $request->id)
+		$ProdukModel = Produk::where('id', $request->id)
 							->delete();
 
 		return response()->json(['success'=> $request->Nama.' berhasil dihapus']);		
