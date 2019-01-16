@@ -71,17 +71,16 @@
                             <label>Tanggal</label>
                             <div class="input-group date">
                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                <input type="text" class="form-control" value="10/04/2018" >
+                                <input type="text" class="form-control" value="10/04/2018" id="tgl">
                             </div>
                         </div>
                         <div class="form-group-inner" align="left">
                             <label>Bahan</label>
                             <div class="form-select-list">
-                                <select class="form-control custom-select-value" name="Bahan">
-                                    <option>Bahan 1</option>
-                                    <option>Bahan 2</option>
-                                    <option>Bahan 3</option>
-                                    <option>Bahan 4</option>
+                                <select class="form-control custom-select-value" name="Bahan" id="bahan">
+                                    @foreach ($Bahan as $value)
+                                        <option value="{{ $value->id }}"> {{ $value->nama }} </option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -96,11 +95,10 @@
                         <div class="form-group-inner" align="left">
                             <label>Kas</label>
                             <div class="form-select-list">
-                                <select class="form-control custom-select-value" name="Kas">
-                                    <option>Kas 1</option>
-                                    <option>Kas 2</option>
-                                    <option>Kas 3</option>
-                                    <option>Kas 4</option>
+                                <select class="form-control custom-select-value" name="Kas" id="kas">
+                                    @foreach ($Kas as $value)
+                                        <option value="{{ $value->id }}"> {{ $value->nama }} ({{ "Rp ".number_format($value->saldo) }}) </option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>

@@ -4,12 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pembelian;
+use App\Bahan;
+use App\Kas;
 
 class PembelianController extends Controller
 {
 	public function index()
 	{
-		return view('Pembelian.index');	
+        $Bahan = Bahan::get();
+        $Kas = Kas::get();
+
+		return view('Pembelian.index', compact("Bahan", $Bahan), compact("Kas", $Kas));	
 	}
 
     public function dashboard()
