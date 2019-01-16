@@ -39,6 +39,12 @@ Route::post('/master/produk/delete', 'ProdukController@delete')->name('produk.de
 
 
 Route::get('/transaksi/pembelian/', 'PembelianController@index')->name('pembelian.index');
+Route::post('/transaksi/pembelian/store', 'PembelianController@store')->name('pembelian.store');
+Route::get('/transaksi/pembelian/getAll', 'PembelianController@getAll')->name('pembelian.all');
+Route::post('/transaksi/pembelian/update', 'PembelianController@update')->name('pembelian.update');
+Route::post('/transaksi/pembelian/delete', 'PembelianController@delete')->name('pembelian.delete');
+
+
 Route::get('/transaksi/penjualan/', 'Penjualan@index')->name('penjualan.index');
 Route::get('/transaksi/mutasi kas/', 'MutasiKasController@index')->name('mutasi.index');
 Route::get('/transaksi/pemasukan/', 'pemasukan@index')->name('pemasukan.index');
