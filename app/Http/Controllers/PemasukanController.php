@@ -4,15 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pemasukan;
+use App\Kas;
 
 class PemasukanController extends Controller
 {
 	public function index()
 	{
-		return view('Pemasukan.index');	
+		$Kas = Kas::get();
+
+		return view('Pemasukan.index', compact("Kas", $Kas));	
 	}
 
-	public function getAll()
+	public function getAll(Request $request)
 	{
 		$data = Pemasukan::select('pemasukan.*', 'kas.nama as NamaKas')
 						   ->join('kas', 'pemasukan.id_kas', 'kas.id')
@@ -31,6 +34,15 @@ class PemasukanController extends Controller
 			    						'transaksi' => $request->Transaksi,
 			    						'jumlah' => $request->Jumlah
 										]);
+
+    	$dataKas = Kas::where('id', $request->KasId)->first();
+
+    	$dataKas->saldo = $dataKas->saldo + ($request->Qty * $request->Harga);
+
+    	$KasModel = Kas::where('id', $dataKas->id)
+    					 ->update([
+    					 	'saldo' => $dataKas->saldo
+    					 ]);
 
 		return response()->json(['success'=> 'Pemasukan berhasil ditambahkan']);
     }

@@ -95,7 +95,7 @@
 
                 success: function(result){
                     $('#produk').val('');
-                    $('#tgl').val('');
+                    $('#tgl').datepicker('setDate', 'today');
                     $('#qty').val('');
                     $('#harga').val('');
 
@@ -143,6 +143,10 @@
         }
 
         $( document ).ready(function(){
+            $('#tgl').datepicker('setDate', 'today');
+            $('#start').datepicker('setDate', 'today');
+            $('#end').datepicker('setDate', 'today');
+            
             getData();
 
             $('#btnSave').click(function(e){
@@ -150,10 +154,6 @@
 
                 getData();
             });
-
-            $('#tgl').datepicker('setDate', 'today');
-            $('#start').datepicker('setDate', 'today');
-            $('#end').datepicker('setDate', 'today');
 
             $('#start').change(function(){
                 getData();

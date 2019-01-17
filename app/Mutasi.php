@@ -13,5 +13,5 @@ class Mutasi extends Model
     						'jumlah_debet', 
     						'id_kas_kredit',
     						'jumlah_kredit'
-    					]
+    					];
 }

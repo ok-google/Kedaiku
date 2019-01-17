@@ -37,20 +37,28 @@ Route::get('/master/produk/getAll', 'ProdukController@getAll')->name('produk.all
 Route::post('/master/produk/update', 'ProdukController@update')->name('produk.update');
 Route::post('/master/produk/delete', 'ProdukController@delete')->name('produk.delete');
 
-
 Route::get('/transaksi/pembelian/', 'PembelianController@index')->name('pembelian.index');
 Route::post('/transaksi/pembelian/store', 'PembelianController@store')->name('pembelian.store');
 Route::get('/transaksi/pembelian/getAll', 'PembelianController@getAll')->name('pembelian.all');
-Route::post('/transaksi/pembelian/update', 'PembelianController@update')->name('pembelian.update');
-Route::post('/transaksi/pembelian/delete', 'PembelianController@delete')->name('pembelian.delete');
+// Route::post('/transaksi/pembelian/update', 'PembelianController@update')->name('pembelian.update');
+// Route::post('/transaksi/pembelian/delete', 'PembelianController@delete')->name('pembelian.delete');
 
 Route::get('/transaksi/penjualan/', 'PenjualanController@index')->name('penjualan.index');
 Route::get('/transaksi/penjualan/getAll', 'PenjualanController@getAll')->name('penjualan.getAll');
 Route::post('/transaksi/penjualan/store', 'PenjualanController@store')->name('penjualan.store');
 
 Route::get('/transaksi/mutasi kas/', 'MutasiKasController@index')->name('mutasi.index');
-Route::get('/transaksi/pemasukan/', 'pemasukan@index')->name('pemasukan.index');
-Route::get('/transaksi/pengeluaran/', 'pengeluaran@index')->name('pengeluaran.index');
+Route::get('/transaksi/mutasi/getAll', 'MutasiKasController@getAll')->name('mutasi.all');
+Route::post('/transaksi/mutasi/store', 'MutasiKasController@store')->name('mutasi.store');
+
+Route::get('/transaksi/pemasukan/', 'PemasukanController@index')->name('pemasukan.index');
+Route::get('/transaksi/pemasukan/getAll', 'PemasukanController@getAll')->name('pemasukan.all');
+Route::post('/transaksi/pemasukan/store', 'PemasukanController@store')->name('pemasukan.store');
+
+Route::get('/transaksi/pengeluaran/', 'PengeluaranController@index')->name('pengeluaran.index');
+Route::get('/transaksi/pengeluaran/getAll', 'PengeluaranController@getAll')->name('pengeluaran.all');
+Route::post('/transaksi/pengeluaran/store', 'PengeluaranController@store')->name('pengeluaran.store');
 
 Route::get('/laporan/laba rugi', 'LabaRugiController@index')->name('labarugi.index');
+Route::get('/laporan/getAll', 'LabaRugiController@getAll')->name('labarugi.all');
 Route::get('/laporan/grafik', 'GrafikController@index')->name('grafik.index');
