@@ -25,8 +25,15 @@ class KasController extends Controller
 	{
 		$KasModel = Kas::create([
 						'nama' => $request->Nama,
-						'saldo' => $request->Saldo
+						'saldo' => $request->Saldo,
+						'isDefault' => $request->Default
 					]);
+
+		if($request->Default == 1){
+			$KasUpdate = Kas::where('id', '!=', $KasModel->id)
+							->update(['isDefault' => 0]);	
+		}
+		
 
 		return response()->json(['success'=> $request->Nama.' berhasil ditambahkan']);
 	}

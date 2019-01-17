@@ -36,10 +36,10 @@
                         </div>
                         <div class="form-group-inner" align="left">
                             <label>Saldo</label>
-                            <input type="number" id="harga" class="form-control" placeholder="Saldo">
+                            <input type="number" id="saldo" class="form-control" placeholder="Saldo Kas">
                         </div>
                     </form>
-                    	<input type="checkbox" style="margin-left: 3%;"/>
+                    	<input type="checkbox" style="margin-left: 3%;" id='default' value="1" />
 						<label>Default Kasir</label>
                 </div>
                 <div class="modal-footer">
@@ -67,7 +67,8 @@
                 data: {
                     _token: $("input[name=_token]").val(),
                     Nama: $('#nama').val(),
-                    Saldo: $('#saldo').val()
+                    Saldo: $('#saldo').val(),
+                    Default: ($('#default:checked').val() == 1) ? 1 : 0
                 },
                 success: function(result){
                     $('#nama').val('');
@@ -103,6 +104,10 @@
             });
         }
 
+        function numberSeparator(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
         function getData(){
             $.ajax({
                 url: "{{ url('/master/kas/getAll') }}",
@@ -120,7 +125,7 @@
                                             result[index].nama +' </div> ' +
                                         '</div>' +
                                         '<div style="margin-left: 3%; font-size: 10px;">' +
-                                            result[index].saldo +
+                                            'Rp ' + numberSeparator(result[index].saldo) +
                                         '</div>' +
                                     '</div>' +
                                 '</div>';
@@ -157,6 +162,7 @@
             getData();
 
             $('#btnSave').click(function(e){
+                    
                 if($('#type').val() == "update"){
                     update(e);
                 }else{

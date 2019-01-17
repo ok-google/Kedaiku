@@ -103,6 +103,10 @@
             });
         }
 
+        function numberSeparator(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
         function getData(){
             $.ajax({
                 url: "{{ url('/master/produk/getAll') }}",
@@ -120,7 +124,7 @@
                                             result[index].nama +' </div> ' +
                                         '</div>' +
                                         '<div style="margin-left: 2%; font-size: 12px; font-weight: black; font-style: bold;">' +
-                                            result[index].harga +
+                                            'Rp. ' + numberSeparator(result[index].harga) +
                                         '</div>' +
                                     '</div>' +
                                 '</div>';
