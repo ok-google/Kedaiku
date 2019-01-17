@@ -39,7 +39,10 @@ Route::post('/master/produk/delete', 'ProdukController@delete')->name('produk.de
 
 
 Route::get('/transaksi/pembelian/', 'PembelianController@index')->name('pembelian.index');
-Route::get('/transaksi/penjualan/', 'Penjualan@index')->name('penjualan.index');
+Route::get('/transaksi/penjualan/', 'PenjualanController@index')->name('penjualan.index');
+Route::get('/transaksi/penjualan/getAll', 'PenjualanController@getAll')->name('penjualan.getAll');
+Route::post('/transaksi/penjualan/store', 'PenjualanController@store')->name('penjualan.store');
+
 Route::get('/transaksi/mutasi kas/', 'MutasiKasController@index')->name('mutasi.index');
 Route::get('/transaksi/pemasukan/', 'pemasukan@index')->name('pemasukan.index');
 Route::get('/transaksi/pengeluaran/', 'pengeluaran@index')->name('pengeluaran.index');

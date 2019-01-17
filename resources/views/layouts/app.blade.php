@@ -79,8 +79,8 @@
     <script src="{{ asset('admin/js/modal-active.js') }}"></script>
     <!-- Charts JS
         ============================================ -->
-    <script src="{{ asset('admin/js/charts/Chart.js') }}"></script>
-    <script src="{{ asset('admin/js/charts/line-chart.js') }}"></script>
+    {{-- <script src="{{ asset('admin/js/charts/Chart.js') }}"></script>
+    <script src="{{ asset('admin/js/charts/line-chart.js') }}"></script> --}}
     <script src="{{ asset('admin/js/jquery.form.min.js') }}"></script>
     <script src="{{ asset('admin/js/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('admin/js/form-active.js') }}"></script>

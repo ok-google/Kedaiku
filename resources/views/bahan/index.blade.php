@@ -85,6 +85,8 @@
                 },
                 success: function(result){
                     $('#nama').val('');
+                    $('#id').val('');
+                    $('#type').val('');
                     $('#input-modal').modal('hide');
                 }
             });
@@ -109,6 +111,8 @@
                 },
                 success: function(result){
                     $('#nama').val('');
+                    $('#id').val('');
+                    $('#type').val('');
                     $('#input-modal').modal('hide');
                 }
             });
@@ -173,10 +177,11 @@
                 getData();
             });
 
-            // $( "#listBahan" ).delegate( ".bahan", "mousedown", function(e) {
-            //         $('#id').val($(this).attr('data-id'));
-            //         $('#notif-modal').modal('show'); 
-            // });
+            $( "#listBahan" ).delegate( ".bahan", "mousedown", function(e) {
+                    $('#type').val("update");
+                    $('#id').val($(this).attr('data-id'));
+                    $('#notif-modal').modal('show'); 
+            });
 
             $("#btnHapus").click(function(){
                 hapus();
