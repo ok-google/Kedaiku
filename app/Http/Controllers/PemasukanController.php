@@ -37,7 +37,7 @@ class PemasukanController extends Controller
 
     	$dataKas = Kas::where('id', $request->KasId)->first();
 
-    	$dataKas->saldo = $dataKas->saldo + ($request->Qty * $request->Harga);
+    	$dataKas->saldo = $dataKas->saldo + $request->Jumlah;
 
     	$KasModel = Kas::where('id', $dataKas->id)
     					 ->update([

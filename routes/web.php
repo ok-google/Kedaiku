@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', 'Penjualan@dashboard')->name('penjualan.dashboard');
+Route::get('/', 'PenjualanController@dashboard')->name('penjualan.dashboard');
 
 Route::get('/master/bahan/', 'BahanController@index')->name('bahan.index');
 Route::post('/master/bahan/store', 'BahanController@store')->name('bahan.store');

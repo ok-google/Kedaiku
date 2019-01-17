@@ -18,7 +18,9 @@ class PenjualanController extends Controller
 
     public function dashboard()
     {	
-        return view('Penjualan.dashboard');
+        $Produk = Produk::get();
+
+        return view('Penjualan.dashboard', compact("Produk", $Produk));
     }
 
     public function getAll(Request $request)

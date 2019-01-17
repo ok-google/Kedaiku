@@ -27,15 +27,8 @@
             
             </tbody>
 
-            <tfoot>
-                <tr>
-                    <td scope="col" style="text-align: center; padding-top: 25%;"> Total </td>
-                    <td scope="col" style="text-align: right; padding-top: 25%;"> 0 </td>
-                    <td scope="col" style="text-align: right; padding-top: 25%;"> 0 </td>
-                </tr>
-                <tr>
-                    <td colspan="3" scope="col" style="text-align: center"> 0 </td>
-                </tr>
+            <tfoot id="totalLabaRugi">
+                
             </tfoot>
         </table>
     </div>
@@ -61,10 +54,10 @@
                         var html;
                         html = '<tr>' +
                                     '<td style="text-align: center;">' + result[index].transaksi + '</td>' +
-                                    '<td rowspan="2" style="text-align: right; padding-top: 2.5%;" class="debet">' + 
+                                    '<td rowspan="2" style="text-align: right; padding-top: 2.5%;" class="debet" data-nilai="'+ result[index].debet +'"">' + 
                                         numberSeparator(result[index].debet) + 
                                     '</td>' +
-                                    '<td rowspan="2" style="text-align: right; padding-top: 2.5%;" class="kredit">' +
+                                    '<td rowspan="2" style="text-align: right; padding-top: 2.5%;" class="kredit" data-nilai="'+ result[index].kredit +'"">' + 
                                         numberSeparator(result[index].kredit) +
                                     '</td>' +
                                 '</tr>' +
@@ -76,6 +69,28 @@
 
                         $('#listLabaRugi').append(html);
                     });
+
+                    var debet = 0;
+                    $('.debet').each(function(){
+                        debet = parseInt(debet) + parseInt($(this).attr('data-nilai'));
+                    });
+
+                    var kredit = 0;
+                    $('.kredit').each(function(){
+                        kredit = parseInt(kredit) + parseInt($(this).attr('data-nilai'));
+                    });
+
+                    html = '<tr>' +
+                                '<td scope="col" style="text-align: center; padding-top: 25%;"> Total </td>' +
+                                '<td scope="col" style="text-align: right; padding-top: 25%;"> '+ numberSeparator(debet) +' </td>' +
+                                '<td scope="col" style="text-align: right; padding-top: 25%;"> '+ numberSeparator(kredit) +' </td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td colspan="3" scope="col" style="text-align: center"> '+ numberSeparator(kredit - debet) +' </td>' +
+                            '</tr>';
+
+                    $('#totalLabaRugi').empty();
+                    $('#totalLabaRugi').append(html);
                 }
             });   
         }
